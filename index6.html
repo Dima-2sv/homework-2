@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let text = "  JavaScript — это удивительный язык программирования! Он используется для создания сайтов, мобильных приложений и многого другого.  ";
+
+        // 1. Удалите лишние пробелы в начале и в конце строки.
+        text = text.trim();
+        console.log(text); // "JavaScript — это удивительный язык программирования! Он используется для создания сайтов, мобильных приложений и многого другого."
+
+        // 2. Преобразуйте всю строку в верхний регистр.
+        let upperCaseText = text.toUpperCase();
+        console.log(upperCaseText); // "JAVASCRIPT — ЭТО УДИВИТЕЛЬНЫЙ ЯЗЫК ПРОГРАММИРОВАНИЯ! ОН ИСПОЛЬЗУЕТСЯ ДЛЯ СОЗДАНИЯ САЙТОВ, МОБИЛЬНЫХ ПРИЛОЖЕНИЙ И МНОГОГО ДРУГОГО."
+
+        // 3. Преобразуйте всю строку в нижний регистр.
+        let lowerCaseText = text.toLowerCase();
+        console.log(lowerCaseText); // "javascript — это удивительный язык программирования! он используется для создания сайтов, мобильных приложений и многого другого."
+
+        // 4. Найдите индекс первого упоминания слова "язык".
+        let firstIndexOfWord = text.indexOf("язык");
+        console.log(firstIndexOfWord); // 23
+
+        // 5. Найдите индекс последнего упоминания буквы "о".
+        let lastIndexOfLetter = text.lastIndexOf("о");
+        console.log(lastIndexOfLetter); // 119
+
+        // 6. Извлеките из строки только первое предложение.
+        let firstSentence = text.split("!")[0] + "!";
+        console.log(firstSentence); // "JavaScript — это удивительный язык программирования!"
+
+        // 7. Разделите строку на массив предложений (разделитель — точка).
+        let sentencesArray = text.split(".");
+        console.log(sentencesArray); // ["JavaScript — это удивительный язык программирования! Он используется для создания сайтов, мобильных приложений и многого другого", ""]
+
+        // 8. Посчитайте количество слов в строке.
+        let wordCount = text.split(" ").filter(word => word.length > 0).length;
+        console.log(wordCount); // 15
+
+        // 9. Замените слово "удивительный" на "потрясающий".
+        let replacedText = text.replace("удивительный", "потрясающий");
+        console.log(replacedText); // "JavaScript — это потрясающий язык программирования! Он используется для создания сайтов, мобильных приложений и многого другого."
+
+        // 10. Проверьте, начинается ли строка с "JavaScript" (без учёта пробелов в начале).
+        let startsWithJavaScript = text.trim().startsWith("JavaScript");
+        console.log(startsWithJavaScript); // true
+
+        // 11. Проверьте, заканчивается ли строка словом "другого." (без учёта пробелов в конце).
+        let endsWithDrugogo = text.trim().endsWith("другого.");
+        console.log(endsWithDrugogo); // true
+
+        // 12. Извлеките из строки все символы с 20 по 40 (включительно).
+        let substring = text.substring(20, 41);
+        console.log(substring); // "удивительный язык программирования"
+
+        // 13. Создайте сокращённую версию строки.
+        let shortenedText = text.length > 60 ? text.substring(0, 60) + "..." : text;
+        console.log(shortenedText); // "JavaScript — это удивительный язык программирования! Он испол..."
+
+        // 14. Разделите строку на массив слов и отсортируйте их по алфавиту.
+        let sortedWords = text.split(" ").sort();
+        console.log(sortedWords); // ["JavaScript", "—", "это", "удивительный", "язык", "программирования!", "Он", "используется", "для", "создания", "сайтов,", "мобильных", "приложений", "и", "многого", "другого."]
+
+        // 15. Удалите все восклицательные знаки из строки.
+        let textWithoutExclamations = text.replace(/!/g, "");
+        console.log(textWithoutExclamations); // "  JavaScript — это удивительный язык программирования Он используется для создания сайтов, мобильных приложений и многого другого.  "
+    </script>
+</body>
+
+</html>
